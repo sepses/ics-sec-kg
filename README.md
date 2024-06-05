@@ -1,11 +1,14 @@
-# The SEPSES-CSKG Engine (v2.1.0)
+# The ICS-SEC KG Engine (v 1.0)
 
-SEPSES-CSKG is a cybersecurity knowledge graph that integrates and links critical information such as vulnerabilities, weaknesses and attack patterns from various publicly available sources. The Knowledge Graph is continuously updated to reflect changes in various data sources used as inputs, i.e., CAPEC, CPE, CVE, CVSS, and CWE. This engine is designed as a RDF generation mechanism from several CyberSecurity resources. In our server, we add additional bash command to run it continuously, but we didn't provide the script here.
+The ICS-SEC KG is a cybersecurity knowledge graph that integrates and links critical cybersecurity information of Industrial Control System (ICS) and Operational Technology (OT) from various publicly available sources. It extends the existing <a href="https://github.com/sepses/cyber-kg-converter" target="_blank">SEPSES-CSKG</a> by including ICS related security resource such as <a href="https://www.icsadvisoryproject.com/" terget="_blank">Industrial Control System Advisory (ICSA)</a> and <a href="https://attack.mitre.org/matrices/ics" target="_blank">MITRE ATT&CK Matrics for ICS</a> resources. The Knowledge Graph is continuously updated to reflect the dynamic changes in ICS-Security landscapes.
 
-<span style="color:red">**New!**</span> in Version 2.1.0, several additional resources for <u>Industrial Control System Cybersecurity (ICS-Sec)</u> are included, i.e., MITRE ATT&CK (Enterprise and ICS) and ICSA (Industrial Control System Advisory).
 
-## Vocabularies
-Several vocabularies are developed to represent the SEPSES-CSKG knowledge graphs, as follows:
+## Integrated ISC-SEC Ontology
+The ICS-SEC KG leveraged an integrated ontology as depicted in the following figure:
+
+![ ](https://raw.githubusercontent.com//sepses/main/ics-sec-ontology.png)<p align="center"> **Figure 1:** Integrated ICS-SEC Ontology.
+
+It consist of several vocabularies are developed to represent the ICS-SEC knowledge graphs in an integrated manner, as follows:
 
 | Prefix | Description                               | Link                                                                                   |
 |--------|-------------------------------------------|----------------------------------------------------------------------------------------|
