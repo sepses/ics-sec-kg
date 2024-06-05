@@ -6,7 +6,7 @@ The ICS-SEC KG is a cybersecurity knowledge graph that integrates and links crit
 ## Integrated ISC-SEC Ontology
 The ICS-SEC KG leveraged an integrated ontology as depicted in the following figure:
 
-![ ](https://raw.githubusercontent.com//sepses/main/ics-sec-ontology.png)<p align="center"> **Figure 1:** Integrated ICS-SEC Ontology.
+![ ](https://raw.githubusercontent.com/sepses/ics-sec-kg/master/ics-sec-ontology.png)<p align="center"> **Figure 1:** Integrated ICS-SEC Ontology.
 
 It consist of several vocabularies are developed to represent the ICS-SEC knowledge graphs in an integrated manner, as follows:
 
