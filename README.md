@@ -68,6 +68,8 @@ rr:predicateObjectMap [
     ];
 ...
 ```
+The complete RML mapping be found <a href="https://github.com/sepses/ics-sec-kg/tree/master/src/main/resources/rml">here</a>.
+
 ### SHACL Rule Example for ICSA
 ```bash
 ...
@@ -103,6 +105,8 @@ ssr:icsaValidator
     sh:targetClass  icsa:ICSA
 ...
 ```
+The complete SHACL rule be found <a href="https://github.com/sepses/ics-sec-kg/tree/master/src/main/resources/shacl">here</a>.
+
 ## ICS-SEC KG Construction Pipeline Installation
 ### Requirements
 
