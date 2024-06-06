@@ -31,6 +31,7 @@ To query/access the constructed KG, we provide several interface as follows:
 | Linked Data Fragment-Server   |Using <a href="https://ldf-client.sepses.ifs.tuwien.ac.at">Communica</a> to query the KG | MIT Lisence         | http://w3id.org/sepses/ldf         |
 | Dump File |KG provided in .ttl and .hdt file | MIT Lisence  | http://w3id.org/sepses/dumps   |
 
+note: example queries can be found <a href="https://github.com/sepses/ics-sec-kg/blob/master/example-queries.txt">here</a>.
 ## Installation
 
 ### Requirements
@@ -65,11 +66,6 @@ The prototype will then
 We have tried and tested it in OSX (Intel i7@3,1GHz, OSX Mojave, 16GB RAM). 
 The benchmark result (excluding SHACL check) is available in the following [link](https://github.com/sepses/cyber-kg-converter/blob/master/doc/benchmark.png)
 
-## Access Services
-
-Example queries are now added (`example-queries.txt`), which can be tested in our [SPARQL endpoint](https://w3id.org/sepses/sparql).
-
-Other interface beyond SPARQL are also provided, such as [Linked Data Interface](https://sepses.ifs.tuwien.ac.at/index.php/cyber-kg/), [Triple Pattern Fragment](http://ldf-server.sepses.ifs.tuwien.ac.at/) and [Dump-files](https://sepses.ifs.tuwien.ac.at/index.php/datasets/)   (in .turtle and .HDT).
 
 
 @SEPSES team
