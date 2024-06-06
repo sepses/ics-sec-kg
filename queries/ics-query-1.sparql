@@ -1,0 +1,19 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterm: <http://purl.org/dc/terms/>
+
+CONSTRUCT {
+    ?s attack:implementsTechnique ?te. ?te attack:accomplishesTactic ?t.
+    << ?s attack:implementsTechnique ?te >> attack:hasReference ?r .
+    ?r icsa:hasCVE ?cve . ?cve cve:hasCPE ?cpe .
+    ?r icsa:hasCWE ?cwe . ?cwe cwe:hasCAPEC ?capec.
+    ?s attack:hasGroup ?g. ?cpe cpe:hasProduct ?pro.
+    ?cpe cpe:hasVendor ?ven.
+} WHERE {
+ ?s a attack:Malware. ?s attack:implementsTechnique ?te .
+    OPTIONAL { << ?s attack:implementsTechnique ?te >> attack:hasReference ?r .
+            ?r icsa:hasCVE ?cve . ?r icsa:hasCWE ?cwe .
+            ?cwe cwe:hasCAPEC ?capec. ?cve cve:hasCPE ?cpe.
+            ?cpe cpe:hasProduct ?pro. ?cpe cpe:hasVendor ?ven }
+            ?te attack:accomplishesTactic ?t. ?s attack:hasGroup ?g.
+            ?s dcterm:title "Triton"           
+}
