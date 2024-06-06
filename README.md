@@ -34,9 +34,24 @@ To query/access the constructed KG, we provide several interfaces:
 
 
 ## Example Query
-(+SPARQ Query) 
 
-another example queries can be found <a href="https://github.com/sepses/ics-sec-kg/blob/master/example-queries.txt">here</a>.
+```bash
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX icsa: <http://w3id.org/sepses/vocab/ref/icsa#> 
+
+SELECT ?cveId ?score  ?icsaId 
+WHERE {
+  ?cveId cve:hasCPE ?cpe . 
+  ?cveId cve:hasCVSS3BaseMetric ?cvss .
+  ?cvss cvss:baseScore ?score. 
+  ?icsaId icsa:hasCVE ?cveId .
+}
+ ORDER by DESC(?score)
+LIMIT 5
+```
+
+another example queries can be found <a href="https://github.com/sepses/ics-sec-kg/tree/master/queries">here</a>.
 
 ## RML Mapping & SHACL Validation
 To guarantee the quality and consistency of the constructed knowledge graph, ICS-SEC leveraged a declarative RDF Mapping (i.e., RML) and used SHACL to validate them. The following snippets depicts an example of RML mapping for ICSA resource from JSON file and its SHACL rule. 
