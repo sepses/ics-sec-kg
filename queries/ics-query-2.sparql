@@ -1,0 +1,17 @@
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX SOAR4IoT: <http://w3id.org/sepses/vocab/SOAR4IoT#> 
+PREFIX icsa: <http://w3id.org/sepses/vocab/ref/icsa#> 
+
+SELECT distinct  ?cveId ?cvssScore ?icsaId ?cweId 
+WHERE { ?s a <http://w3id.org/sepses/vocab/SOAR4IoT#policy> .
+        ?s SOAR4IoT:hasCPE ?cpe .
+        ?cveId cve:hasCPE ?cpe .
+        ?cveId cve:hasCVSS3BaseMetric ?cvss .
+        ?cvss cvss:baseScore ?cvssScore.
+        ?icsaId icsa:hasCVE ?cveId .
+        ?icsaId icsa:hasCWE ?cweId
+    FILTER(regex(STR(?s),"Siemens"))
+} 
+ORDER by DESC(?s)
+LIMIT 5
