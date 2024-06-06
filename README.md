@@ -27,9 +27,9 @@ To query/access the constructed KG, we provide several interface as follows:
 | Service Type | Description |  Lisence                               | Persistent URL                                                                                   |
 |--------|--------------------|-----------------------|----------------------------------------------------------------------------------------|
 | SPARQL Endpoint | Using SPARQL to query the KG   |  MIT Lisence                    | <a href="http://w3id.org/sepses/sparql" target="_blank">http://w3id.org/sepses/sparql</a> |
-| Linked Data Interface  | Browsing the linked data through web page | MIT Lisence | <a href="http://w3id.org/sepses/resources" target="_blank">http://w3id.org/sepses/resources</a>     |
+| Linked Data Interface  | Browsing the linked data through web page | MIT Lisence | <a href="http://w3id.org/sepses/resource/cpe/product/triton" target="_blank">http://w3id.org/sepses/resource/{type-of-resource}/{entity-id}</a>     |
 | Linked Data Fragment    |Using TPF Client/Communica to query the KG | MIT Lisence         | <a href="http://w3id.org/sepses/ldf" target="_blank">http://w3id.org/sepses/ldf</a>         |
-| Dump File |KG provided in .ttl and .hdt file | MIT Lisence  | <a href="http://w3id.org/sepses/dump" target="_blank">http://w3id.org/sepses/dump</a>     |
+| Dump File |KG provided in .ttl and .hdt file | MIT Lisence  | <a href="http://w3id.org/sepses/dumps" target="_blank">http://w3id.org/sepses/dumps</a>     |
 
 ## Installation
 
