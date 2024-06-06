@@ -8,7 +8,7 @@ The ICS-SEC KG leveraged an integrated ontology called ICS-SEC Ontology shown in
 
 ![ ](https://raw.githubusercontent.com/sepses/ics-sec-kg/master/ics-sec-ontology.png)<p align="center"> **Figure 1:** Integrated ICS-SEC Ontology.
 
-The ontology encompases seven RDF/OWL based vocabularies as follows:
+The ICS-SEC ontology consists of seven RDF/OWL-based vocabularies described as follows:
 
 | Prefix | Description                               | Namespace and Ontology Documentation (click the link!)                                                                                   |
 |--------|-------------------------------------------|----------------------------------------------------------------------------------------|
