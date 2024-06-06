@@ -6,9 +6,9 @@ The ICS-SEC KG is a cybersecurity knowledge graph that integrates and links crit
 ## Integrated ISC-SEC Ontology
 The ICS-SEC ontology is depicted in the following figure:
 
-![ ](https://raw.githubusercontent.com/sepses/ics-sec-kg/master/ics-sec-ontology.png)<p align="center"> **Figure 1:** Integrated ICS-SEC Ontology.
+![ ](https://raw.githubusercontent.com/sepses/ics-sec-kg/master/ics-sec-ontology.png)<p align="center"> **Figure 1:** <a href="https://w3id.org/sepses/vocab/ref/ics-sec">Integrated ICS-SEC Ontology</a>.
 
-The ICS-SEC ontology consists of seven RDF/OWL-based vocabularies:
+The integrated ICS-SEC ontology can be found <a href="https://w3id.org/sepses/vocab/ref/ics-sec">here</a>. It consists of seven RDF/OWL-based vocabularies:
 
 | Prefix | Description                               | Namespace and Documentation (click at the link!)                                                                                   |
 |--------|-------------------------------------------|----------------------------------------------------------------------------------------|
@@ -29,7 +29,7 @@ To query/access the constructed KG, we provide several interfaces:
 | SPARQL Endpoint | Using SPARQL to query the KG   |  MIT License                    | http://w3id.org/sepses/sparql |
 | Linked Data Interface  | Browsing the linked data through a web page | MIT License | http://w3id.org/sepses/resource/cpe/product/triton (example)    |
 | Linked Data Fragment-Server   |Using <a href="https://ldf-client.sepses.ifs.tuwien.ac.at">Communica</a> to query the KG | MIT License         | http://w3id.org/sepses/ldf         |
-| Dump File |KG provided in Turtle (.ttl) and HDT (.hdt) format | MIT License  | http://w3id.org/sepses/dumps   |
+| Dump File |KG provided in Turtle (.ttl) and HDT (.hdt) format | MIT License  | http://w3id.org/sepses/dumps/latest   |
 
 
 
