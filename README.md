@@ -35,19 +35,24 @@ To query/access the constructed KG, we provide several interfaces:
 
 ## Example Query
 
+This query example ilustrates vulnerability assesment to a certain assets in typical ICS infrastructure namely "Siemens".
 ```bash
 PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
 PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX SOAR4IoT: <http://w3id.org/sepses/vocab/SOAR4IoT#> 
 PREFIX icsa: <http://w3id.org/sepses/vocab/ref/icsa#> 
 
-SELECT ?cveId ?score  ?icsaId 
-WHERE {
-  ?cveId cve:hasCPE ?cpe . 
-  ?cveId cve:hasCVSS3BaseMetric ?cvss .
-  ?cvss cvss:baseScore ?score. 
-  ?icsaId icsa:hasCVE ?cveId .
-}
- ORDER by DESC(?score)
+SELECT distinct  ?cveId ?cvssScore ?icsaId ?cweId 
+WHERE { ?s a <http://w3id.org/sepses/vocab/SOAR4IoT#policy> .
+        ?s SOAR4IoT:hasCPE ?cpe .
+        ?cveId cve:hasCPE ?cpe .
+        ?cveId cve:hasCVSS3BaseMetric ?cvss .
+        ?cvss cvss:baseScore ?cvssScore.
+        ?icsaId icsa:hasCVE ?cveId .
+        ?icsaId icsa:hasCWE ?cweId
+    FILTER(regex(STR(?s),"Siemens"))
+} 
+ORDER by DESC(?s)
 LIMIT 5
 ```
 

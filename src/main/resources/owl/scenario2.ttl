@@ -1,0 +1,88 @@
+@prefix agg: <http://jena.apache.org/ARQ/function/aggregate#> .
+@prefix : <http://w3id.org/sepses/vocab/ref/attack#> .
+@prefix sail: <http://www.openrdf.org/config/sail#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geof: <http://www.opengis.net/def/function/geosparql/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix capec: <http://w3id.org/sepses/vocab/ref/capec#> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix cve: <http://w3id.org/sepses/vocab/ref/cve#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix array: <http://www.w3.org/2005/xpath-functions/array> .
+@prefix apf: <http://jena.apache.org/ARQ/property#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix cpe: <http://w3id.org/sepses/vocab/ref/cpe#> .
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix map: <http://www.w3.org/2005/xpath-functions/map> .
+@prefix sr: <http://www.openrdf.org/config/repository/sail#> .
+@prefix res: <http://w3id.org/sepses/resource/> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix cpe-res: <http://w3id.org/sepses/resource/cpe/> .
+@prefix capec-res: <http://w3id.org/sepses/resource/capec/> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix afn: <http://jena.apache.org/ARQ/function#> .
+@prefix list: <http://jena.apache.org/ARQ/list#> .
+@prefix cve-res: <http://w3id.org/sepses/resource/cve/> .
+@prefix cwe: <http://w3id.org/sepses/vocab/ref/cwe#> .
+@prefix SOAR4IoT: <http://w3id.org/sepses/vocab/SOAR4IoT#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ofn: <http://www.ontotext.com/sparql/functions/> .
+@prefix geoext: <http://rdf.useekm.com/ext#> .
+@prefix graphdb: <http://www.ontotext.com/config/graphdb#> .
+@prefix math: <http://www.w3.org/2005/xpath-functions/math> .
+@prefix cwe-res: <http://w3id.org/sepses/resource/cwe/> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix cvss: <http://w3id.org/sepses/vocab/ref/cvss#> .
+@prefix cvss-res: <http://w3id.org/sepses/resource/cvss/> .
+
+<http://w3id.org/sepses/resource/SOAR4IoT/Cisco_Conf_1> a SOAR4IoT:SystemConfiguration;
+  SOAR4IoT:friendlyName "Mock_Siemens";
+  SOAR4IoT:ieeeAddress "";
+  SOAR4IoT:networkAddress 0;
+  SOAR4IoT:powerSource "";
+  SOAR4IoT:applicationVersion 0;
+  SOAR4IoT:hardwareVersion 0;
+  SOAR4IoT:softwareBuildID "";
+  SOAR4IoT:stackVersion 0;
+  SOAR4IoT:zclVersion 0 .
+
+<http://w3id.org/sepses/resource/SOAR4IoT/Siemens_Conf_1> a SOAR4IoT:SystemConfiguration;
+  SOAR4IoT:friendlyName "Mock_Siemens";
+  SOAR4IoT:ieeeAddress "";
+  SOAR4IoT:networkAddress 0;
+  SOAR4IoT:powerSource "";
+  SOAR4IoT:applicationVersion 0;
+  SOAR4IoT:hardwareVersion 0;
+  SOAR4IoT:softwareBuildID "";
+  SOAR4IoT:stackVersion 0;
+  SOAR4IoT:zclVersion 0 .
+
+<http://w3id.org/sepses/resource/SOAR4IoT/Mock_Cisco> a SOAR4IoT:policy;
+  SOAR4IoT:manufacturer "Cisco";
+  SOAR4IoT:location "Lab";
+  SOAR4IoT:hasGroup <http://w3id.org/sepses/resource/SOAR4IoT/Twin_Group_1>;
+  SOAR4IoT:hasConfiguration <http://w3id.org/sepses/resource/SOAR4IoT/Cisco_Conf_1>;
+  SOAR4IoT:hasCPE cpe-res:cpeaciscodigital_network_architecture_center, cpe-res:cpehciscocatalyst_ie3400_heavy_duty_switch,
+    cpe-res:cpeociscoios_xe16101s, cpe-res:cpehciscocatalyst_ie3400_rugged_switch, cpe-res:cpehciscoie_4000,
+    cpe-res:cpehciscoesw6300, cpe-res:cpehciscoesr6300, cpe-res:cpehciscoic3000, cpe-res:cpeociscoic3000_firmware,
+    cpe-res:cpeaciscoiox, cpe-res:cpeaciscofirepower_management_center, cpe-res:cpeaciscovirtualized_infrastructure_manager .
+
+<http://w3id.org/sepses/resource/SOAR4IoT/Mock_Siemens> a SOAR4IoT:policy;
+  SOAR4IoT:manufacturer "Siemens";
+  SOAR4IoT:location "Lab";
+  SOAR4IoT:hasGroup <http://w3id.org/sepses/resource/SOAR4IoT/Twin_Group_1>;
+  SOAR4IoT:hasConfiguration <http://w3id.org/sepses/resource/SOAR4IoT/Siemens_Conf_1>;
+  SOAR4IoT:hasCPE cpe-res:cpehsiemenssimatic_s7300, cpe-res:cpehsiemenssimatic_s7400,
+    cpe-res:cpehsiemenssimatic_s71200, cpe-res:cpeosiemenssinumerik_840d_sl_firmware,
+    cpe-res:cpeasiemenssimatic_step_7120, cpe-res:cpeosiemenssimatic_s7_cpu_1200_firmware40,
+    cpe-res:cpeasiemenssimatic_s71500, cpe-res:cpeasiemenssimatic_s71500_software_controller,
+    cpe-res:cpeosiemenssimatic_s7_300_cpu_firmware, cpe-res:cpeosiemenssimatic_s7_400_cpu_firmware,
+    cpe-res:cpeasiemenssimatic_s7plcsim_advanced, cpe-res:cpehsiemenssinamics_v90_pn,
+    cpe-res:cpeosiemenssinamics_v90_pn_firmware101, cpe-res:cpehsiemenssinamics_s210,
+    cpe-res:cpeosiemenssinamics_s210_firmware51, cpe-res:cpeasiemenssinumerik_840d_sl,
+    cpe-res:cpehsiemenssinumerik_one, cpe-res:cpeosiemenssinumerik_one_firmware, cpe-res:cpehsiemenssimotion_c,
+    cpe-res:cpeosiemenssimotion_c_firmware51, cpe-res:cpehsiemenssimotion_d, cpe-res:cpeosiemenssimotion_d_firmware51,
+    cpe-res:cpehsiemenssimotion_p, cpe-res:cpeosiemenssimotion_p_firmware51 .
