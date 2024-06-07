@@ -55,7 +55,7 @@ WHERE { ?s a <http://w3id.org/sepses/vocab/SOAR4IoT#policy> .
 ORDER by DESC(?s)
 LIMIT 5
 ```
-another example queries can be found <a href="https://github.com/sepses/ics-sec-kg/tree/master/queries">here</a>.
+other example queries can be found <a href="https://github.com/sepses/ics-sec-kg/tree/master/queries">here</a>.
 
 ### Query Instructions:
 <ol>
