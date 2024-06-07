@@ -1,0 +1,12 @@
+#
+# Look up CPE by product name
+#
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+
+SELECT  ?cpeId
+WHERE {
+  ?cve cve:hasCPE ?cpeId
+  .
+  FILTER(regex(str(?cpeId), "cpeoapplemac_os_x" ))
+ }
+#ORDER BY DESC(?cpeId)

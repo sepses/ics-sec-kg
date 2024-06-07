@@ -1,0 +1,24 @@
+#
+# List all CVSS scores for all the vulnerabilities (CVEs) for a given product (CPE).
+#
+
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX asset: <http://w3id.org/sepses/vocab/bgk/assetKnowledge#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX cpe: <http://w3id.org/sepses/vocab/ref/cpe#>
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cwe: <http://w3id.org/sepses/vocab/ref/cwe#>
+
+
+SELECT  ?cveId ?confImpact ?integrImpact ?availImpact ?cvssScore
+WHERE {
+  ?cve cve:hasCPE <http://w3id.org/sepses/resource/cpe/cpeoapplemac_os_x10.14.1> .
+  ?cve cve:id ?cveId.
+  ?cve cve:hasCVSS2BaseMetric ?cvss2.
+  ?cvss2 cvss:confidentialityImpact ?confImpact.
+  ?cvss2 cvss:integrityImpact ?integrImpact.
+  ?cvss2 cvss:availabilityImpact ?availImpact.
+  ?cvss2 cvss:baseScore ?cvssScore.
+ }
+

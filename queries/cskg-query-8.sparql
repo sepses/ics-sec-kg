@@ -1,0 +1,23 @@
+#
+# What mitigations are available (via CWE -> CAPEC)
+#
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX asset: <http://w3id.org/sepses/vocab/bgk/assetKnowledge#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX cpe: <http://w3id.org/sepses/vocab/ref/cpe#>
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cwe: <http://w3id.org/sepses/vocab/ref/cwe#>
+PREFIX capec: <http://w3id.org/sepses/vocab/ref/capec#>
+
+
+SELECT DISTINCT ?cveId ?cweName ?capecName ?mitigation
+WHERE {
+  ?cve cve:hasCPE <http://w3id.org/sepses/resource/cpe/cpeoapplemac_os_x10.14.1> .
+  ?cve cve:id ?cveId.
+  ?cve cve:hasCWE ?cwe.
+  ?cwe cwe:name ?cweName.
+  ?cwe cwe:hasCAPEC ?capec.
+  ?capec capec:name ?capecName.
+  ?capec capec:mitigation ?mitigation .
+ } ORDER BY (?cveId)

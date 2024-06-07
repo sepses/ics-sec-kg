@@ -1,0 +1,13 @@
+#
+# Recent CVEs
+#
+
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT  ?cveId ?modified
+WHERE {
+  ?cve cve:id ?cveId .
+  ?cve dct:modified ?modified .
+ }
+ORDER BY DESC(?modified)

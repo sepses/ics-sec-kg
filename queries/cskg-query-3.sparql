@@ -1,0 +1,27 @@
+#
+# List vulnerabilities (i.e., CVEs) for a given product (i.e., CPE).
+#
+#
+# hasCPE is based on vulnerable product in CVE
+#
+# Complex logical rules could be used to specify combinations - data is there, but queries become complex (could be materialized..)
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX asset: <http://w3id.org/sepses/vocab/bgk/assetKnowledge#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX cpe: <http://w3id.org/sepses/vocab/ref/cpe#>
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cwe: <http://w3id.org/sepses/vocab/ref/cwe#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT  ?cveId  ?issued ?modified
+WHERE {
+  ?cve cve:hasCPE <http://w3id.org/sepses/resource/cpe/cpeoapplemac_os_x10.14.1> .
+  ?cve cve:id ?cveId.
+  ?cve dct:issued ?issued.
+  ?cve dct:modified ?modified.
+ }
+
+
+# Limitation: Only CVEs that match this specific version here
+# wildcards not considered yet - currently adapting the ETL process to account for CPE specifications of affected versions

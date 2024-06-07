@@ -1,0 +1,19 @@
+# need to uncheck "Strict checking of void variables" for the following to work
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX asset: <http://w3id.org/sepses/vocab/bgk/assetKnowledge#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX cpe: <http://w3id.org/sepses/vocab/ref/cpe#>
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cwe: <http://w3id.org/sepses/vocab/ref/cwe#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+
+SELECT  ?name ?status ?description
+WHERE {
+  BIND(IRI("http://w3id.org/sepses/resource/cwe/CWE-125") AS ?cwe).
+  ?cwe dct:description ?description.
+  ?cwe cwe:name ?name.
+  ?cwe cwe:status ?status.
+  ?cwe dct:description ?description.
+ }

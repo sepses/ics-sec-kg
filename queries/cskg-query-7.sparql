@@ -1,0 +1,24 @@
+#
+# Putting it all together..
+#
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX asset: <http://w3id.org/sepses/vocab/bgk/assetKnowledge#>
+PREFIX cve: <http://w3id.org/sepses/vocab/ref/cve#>
+PREFIX cpe: <http://w3id.org/sepses/vocab/ref/cpe#>
+PREFIX cvss: <http://w3id.org/sepses/vocab/ref/cvss#>
+PREFIX cwe: <http://w3id.org/sepses/vocab/ref/cwe#>
+
+
+SELECT DISTINCT ?cveId ?confImpact ?cvssScore ?commonConsequence ?consequenceImpact ?capec
+WHERE {
+  ?cve cve:hasCPE <http://w3id.org/sepses/resource/cpe/cpeoapplemac_os_x10.14.1> .
+  ?cve cve:id ?cveId.
+  ?cve cve:hasCVSS2BaseMetric ?cvss2.
+  ?cvss2 cvss:confidentialityImpact ?confImpact.
+  ?cvss2 cvss:baseScore ?cvssScore.
+  ?cve cve:hasCWE ?cwe.
+  ?cwe cwe:hasCommonConsequence ?commonConsequence.
+  ?cwe cwe:hasCAPEC ?capec.
+  ?commonConsequence cwe:consequenceImpact ?consequenceImpact
+ } ORDER BY (?cveId)
