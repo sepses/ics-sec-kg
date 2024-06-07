@@ -60,11 +60,11 @@ another example queries can be found <a href="https://github.com/sepses/ics-sec-
 ### Query Instructions:
 <ol>
   <li>Open the ICS-SEC query editor through <a href="https://sepses.ifs.tuwien.ac.at/sparql">SPARQL Endpoint</a> or <a href="https://ldf-client.sepses.ifs.tuwien.ac.at">LDF-Client</a> query service. </li>
-  <li>Copy the SPARQL query above (or pick another example) and paste it to the query editor</li>
-  <li>Run the Query</li>
+  <li>Copy the SPARQL query above (or pick another example) and paste it to the query editor.</li>
+  <li>Run the Query.</li>
   <li>To explore the KG further via Linked Data Interface, just follow the link of an entity, for example <a href="http://w3id.org/sepses/resource/icsa/ICSA-19-283-01">http://w3id.org/sepses/resource/icsa/ICSA-19-283-01</a>.  </li>
   
-  
+
   
 </ol>
 
