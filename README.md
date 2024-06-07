@@ -33,7 +33,7 @@ To query/access the constructed KG, we provide several interfaces:
 
 
 
-## Example Query
+### Example Query
 
 This query example ilustrates vulnerability assesment to a certain assets in typical ICS infrastructure namely "Siemens".
 ```bash
@@ -55,8 +55,15 @@ WHERE { ?s a <http://w3id.org/sepses/vocab/SOAR4IoT#policy> .
 ORDER by DESC(?s)
 LIMIT 5
 ```
-
 another example queries can be found <a href="https://github.com/sepses/ics-sec-kg/tree/master/queries">here</a>.
+
+### Query Instructions:
+<ol>
+  <li>Open the ICS-SEC query editor through <a href="https://sepses.ifs.tuwien.ac.at/sparql">SPARQL Endpoint</a> or <a href="https://ldf-client.sepses.ifs.tuwien.ac.at">LDF-Client</a> query service. </li>
+  <li>Copy the SPARQL query above (or pick another example) and paste it to the query editor</li>
+  <li>Run the Query</li>
+  
+</ol>
 
 ## RML Mapping & SHACL Validation
 To guarantee the quality and consistency of the constructed knowledge graph, ICS-SEC leveraged a declarative RDF Mapping (i.e., RML) and used SHACL to validate them. The following snippets depicts an example of RML mapping for ICSA resource from JSON file and its SHACL rule. 
