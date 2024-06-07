@@ -28,7 +28,7 @@ To query/access the constructed KG, we provide several interfaces:
 |--------|--------------------|-----------------------|----------------------------------------------------------------------------------------|
 | SPARQL Endpoint | Using SPARQL to query the KG   |  MIT License                    | http://w3id.org/sepses/sparql |
 | Linked Data Interface  | Browsing the linked data through a web page | MIT License | http://w3id.org/sepses/resource/cpe/product/triton (example)    |
-| Linked Data Fragment-Server   |Using <a href="https://ldf-client.sepses.ifs.tuwien.ac.at">Communica</a> to query the KG | MIT License         | http://w3id.org/sepses/ldf         |
+| Linked Data Fragment-Server   |Using <a href="https://ldf-client.sepses.ifs.tuwien.ac.at">LDF-Client</a> to query the KG | MIT License         | http://w3id.org/sepses/ldf         |
 | Dump File |Latest KG dump file in Turtle (.ttl) and HDT (.hdt) format | MIT License  | http://w3id.org/sepses/dumps/latest   |
 
 
