@@ -24,7 +24,7 @@ The integrated ICS-SEC ontology can be found <a href="https://w3id.org/sepses/vo
 
 To query/access the constructed KG, we provide several interfaces: 
 
-| Service Type | Description |  Lisence                               | Persistent URL                                                                                   |
+| Service Type | Description |  License                               | Persistent URL                                                                                   |
 |--------|--------------------|-----------------------|----------------------------------------------------------------------------------------|
 | SPARQL Endpoint | Using SPARQL to query the KG   |  MIT License                    | http://w3id.org/sepses/sparql |
 | Linked Data Interface  | Browsing the linked data through a web page | MIT License | http://w3id.org/sepses/resource/cpe/product/triton (example)    |
@@ -167,7 +167,7 @@ The prototype will then
 * (iii) store the data in the triplestore
 
 We have tried and tested it in OSX (Intel i7@3,1GHz, OSX Mojave, 16GB RAM). 
-The benchmark result (excluding SHACL check) is available in the following [link](https://github.com/sepses/cyber-kg-converter/blob/master/doc/benchmark.png)
+The benchmark result (excluding SHACL check) is available in the following [link](https://github.com/sepses/cyber-kg-converter/blob/master/doc/benchmark.png).
 
 ## License
 
