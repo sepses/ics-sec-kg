@@ -11,3 +11,4 @@ WHERE {
   ?cve dct:modified ?modified .
  }
 ORDER BY DESC(?modified)
+LIMIT 100

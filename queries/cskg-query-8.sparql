@@ -21,3 +21,4 @@ WHERE {
   ?capec capec:name ?capecName.
   ?capec capec:mitigation ?mitigation .
  } ORDER BY (?cveId)
+LIMIT 100

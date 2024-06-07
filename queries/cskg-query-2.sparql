@@ -9,4 +9,5 @@ WHERE {
   .
   FILTER(regex(str(?cpeId), "cpeoapplemac_os_x" ))
  }
-#ORDER BY DESC(?cpeId)
+ORDER BY DESC(?cpeId)
+LIMIT 100
